@@ -15,7 +15,7 @@ const Coin = ({ coin }) => {
         <span className="w-full text-center">{currencyFormat(coin.current_price)}</span>
         <span className={`flex gap-1 ${coin.price_change_percentage_24h < 0 ? 'text-red-400' : 'text-green-400'}`}>
           {coin.price_change_percentage_24h < 0 ? <TrendingDown /> : <TrendingUp />}
-          {coin.price_change_percentage_24h}
+          {coin.price_change_percentage_24h+"%"}
         </span>
         <div className="hidden sm:block">
           <p className="font-semibold">Market Cap</p>
